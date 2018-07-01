@@ -21,7 +21,7 @@ class ConfigsTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'name' => 'WEB_NAME',
-                'value' => 'Mobile Shop Blog',
+                'value' => 'HandChicken',
                 'created_at' => '2017-04-25 12:12:00',
                 'updated_at' => '2017-04-25 12:12:00',
                 'deleted_at' => NULL,
@@ -174,7 +174,7 @@ class ConfigsTableSeeder extends Seeder
             array (
                 'id' => 19,
                 'name' => 'COPYRIGHT_WORD',
-                'value' => '<a href="http://baijunyao.com">MB</a>www.blmyx.me',
+                'value' => 'Copyright：<a href="http://shop.blmyx.me">HandChicken</a> 专业资讯尽在手鸡网',
                 'created_at' => '2017-04-25 12:12:01',
                 'updated_at' => '2017-06-21 22:51:54',
                 'deleted_at' => NULL,

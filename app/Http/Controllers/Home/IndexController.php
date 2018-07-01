@@ -30,7 +30,7 @@ class IndexController extends Controller
             ->orderBy('created_at', 'desc')
             ->with(['category', 'tags'])
             ->paginate(10);
-        $config = cache('config');
+        $config = cache('config'); // 这个config是一个全局缓存
         $head = [
             'title' => $config->get('WEB_TITLE'),
             'keywords' => $config->get('WEB_KEYWORDS'),

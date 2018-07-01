@@ -33,6 +33,50 @@ Route::group(['namespace' => 'Home'], function () {
     Route::get('search', 'IndexController@search');
     // 用于测试
     Route::get('test', 'IndexController@test');
+    // 用于发表并存储博客
+    // Route::get('postEdit', 'IndexController@postEdit');
+    // Route::post('storePost', 'IndexController@storePost');
+    // 文章管理
+    Route::group(['prefix' => 'blog'], function () {
+        // 文章列表
+        Route::get('index', 'BlogController@index');
+        // 发布文章
+        Route::get('create', 'BlogController@create');
+        Route::post('store', 'BlogController@store');
+        // 编辑文章
+        Route::get('edit/{id}', 'BlogController@edit');
+        Route::post('update/{id}', 'BlogController@update');
+        // 上传图片
+        Route::post('uploadImage', 'BlogController@uploadImage');
+        // 删除文章
+        Route::get('destroy/{id}', 'BlogController@destroy');
+        // 恢复删除的文章
+        Route::get('restore/{id}', 'BlogController@restore');
+        // 彻底删除文章
+        Route::get('forceDelete/{id}', 'BlogController@forceDelete');
+    });
+
+});
+
+
+// 文章管理
+Route::group(['namespace' => 'Home','prefix' => 'article'], function () {
+    // 文章列表
+    Route::get('index', 'BlogController@index');
+    // 发布文章
+    Route::get('create', 'BlogController@create');
+    Route::post('store', 'BlogController@store');
+    // 编辑文章
+    Route::get('edit/{id}', 'BlogController@edit');
+    Route::post('update/{id}', 'BlogController@update');
+    // 上传图片
+    Route::post('uploadImage', 'BlogController@uploadImage');
+    // 删除文章
+    Route::get('destroy/{id}', 'BlogController@destroy');
+    // 恢复删除的文章
+    Route::get('restore/{id}', 'BlogController@restore');
+    // 彻底删除文章
+    Route::get('forceDelete/{id}', 'BlogController@forceDelete');
 });
 
 // Home模块下 三级模式
